@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokecrafter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 150px 20px;
+      animation: fadeInZoom 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .logo {
+      width: 250px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .description {
+      font-size: 1.5rem;
+      color: #666;
+      max-width: 600px;
+      margin: 10px auto 20px;
+    }
+
+    .app-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .app-button:hover {
+      background-color: #0056b3;
+    }
+
+    .features, .about {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .features h2, .about h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .features p {
+      font-size: 1.2rem;
+      color: #666;
+      margin: 20px auto 40px;
+      max-width: 800px;
+      line-height: 1.5;
+      font-weight: 300;
+      padding: 0 10px; /* Ajout d'un léger padding horizontal */
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+      transition: transform 0.3s;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+    }
+
+    .feature img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      transition: opacity 0.3s;
+    }
+
+    .feature div {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+      margin-top: 50px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
+    ul li a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+      <h1>Pokecrafter</h1>
+      <nav>
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+      </nav>
+  </header>
+
+  <div class="intro">
+      <img src="poke-crafter_logo-png.png" alt="Pokecrafter Logo" class="logo">
+      <h1 class="title">Pokecrafter</h1>
+      <p class="description">Discover the ultimate platform where creativity meets the enchanting world of Pokémon! Join us to showcase your artistic talents and connect with fellow enthusiasts.</p>
+      <a href="http://www.pokecrafter.com" class="app-button">Visit Pokecrafter here!</a>
+  </div>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <p>Pokecrafter is a vibrant social network that allows users to share their artistic creations inspired by the beloved Pokémon universe. Our platform is designed to encourage creativity and foster connections among artists of all skill levels. Join us to explore an array of exciting features!</p>
+    
+    <div class="feature">
+        <img src="feature1.png" alt="Account Creation">
+        <div>
+            <h3>Account Creation</h3>
+            <p>Easily sign up and create your account to access a personalized profile, connect with fellow artists, and showcase your unique artwork.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <div>
+            <h3>Login</h3>
+            <p>Log in to your account to continue sharing, discovering, and interacting with amazing artworks from the community.</p>
+        </div>
+        <img src="feature2.png" alt="Login">
+    </div>
+
+    <div class="feature">
+        <img src="feature3.png" alt="Profile">
+        <div>
+            <h3>Profile</h3>
+            <p>On your profile, you can add a description, see who you arre following and who is following you. You can also Change your profile picture and access to the artworks you posted.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <div>
+            <h3>Main Feed</h3>
+            <p>After you log in, you can access to the main feed. You can like, comment or follow people. You can also filter artworks by categories such as AI, 3D, Handcraft and more!</p>
+        </div>
+        <img src="feature4.png" alt="Feed">
+    </div>
+    
+
+    <div class="feature">
+        <img src="feature5.png" alt="Instant Messaging">
+        <div>
+            <h3>Instant Messaging</h3>
+            <p>Talk with other Pokecrafter user with the messaging feature! Add them to your contact list before talking to them!</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <div>
+            <h3>Contests</h3>
+            <p>Participate to Contests to win a trophy ! If it's an official Contest, win a black trophy. If it's a user Contest submission, win a gold, silver a bronze trophy!</p>
+        </div>
+        <img src="feature6.png" alt="Contests">
+    </div>
+
+    <div class="feature">
+        <img src="feature7.png" alt="Artwork">
+        <div>
+            <h3>Post your own Artwork!</h3>
+            <p>Upload your file, add a description, choose a category and get ready to get liked by other Pokecrafter users!</p>
+        </div>
+    </div>
+
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Pokecrafter</h2>
+    <p>Pokecrafter was born from a passion for art and community. As an artist and developer, I wanted to create a platform where people could share their creativity inspired by the enchanting world of Pokémon. The journey began a few months ago when I realized the need for a community-driven space where artists of all skill levels could connect and inspire one another. This project is a part of my portfolio for Holberton School, showcasing a full-stack application with real-time features and interactive elements.</p>
+
+    <p class="emotive-paragraph">As a lifelong Pokémon fan, I have always been captivated by the vibrant colors and imaginative worlds they create. Clément, with his deep love for art honed through his studies at the Beaux-Arts, shares this vision. Together, we pour our hearts into this project, hoping to create a warm and welcoming space for artists everywhere. It’s more than just a project; it’s a dream we cherish deeply.</p>
+    
+    <div class="profiles">
+        <div class="profile">
+            <img src="profil-tang.png" alt="Your Name" class="profile-pic">
+            <p>Your Name</p>
+            <ul>
+                <li><a href="https://linkedin.com/in/yourname">LinkedIn</a></li>
+                <li><a href="https://github.com/yourusername">GitHub</a></li>
+                <li><a href="https://twitter.com/yourusername">Twitter</a></li>
+            </ul>
+        </div>
+        
+        <div class="profile">
+            <img src="profil-clem.png" alt="Clément" class="profile-pic">
+            <p>Clément</p>
+            <ul>
+                <li><a href="https://linkedin.com/in/clement">LinkedIn</a></li>
+                <li><a href="https://github.com/clementusername">GitHub</a></li>
+                <li><a href="https://twitter.com/clementusername">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <p>Follow the project and connect with us:</p>
+    <ul>
+        <li><a href="https://github.com/yourusername/pokecrafter">Project Repository</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2024 Pokecrafter. All rights reserved.</p>
+</footer>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .about {
+        padding: 20px; /* Padding pour le contenu */
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 20px auto; /* Marge autour de la section */
+        max-width: 800px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 10px; /* Espace sous le titre */
+    }
+
+    .emotive-paragraph {
+        font-style: italic;
+        color: #495057;
+        border-left: 4px solid #007bff;
+        padding-left: 15px;
+        margin: 10px 0; /* Marges au-dessus et en dessous */
+        background-color: #e9f7fe;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+
+    .profiles {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0; /* Marge pour les profils */
+    }
+    
+    .profile {
+        flex: 1;
+        text-align: center;
+        margin: 0 10px; /* Espace entre les profils */
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        padding: 15px; /* Padding pour les profils */
+        background-color: #f8f9fa;
+    }
+    
+    .profile:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .profile ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0 0;
+    }
+    
+    .profile ul li {
+        margin: 5px 0;
+    }
+    
+    .profile ul li a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .profile ul li a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 20px; /* Espace au-dessus du footer */
+        color: #6c757d;
+        font-size: 14px;
+    }
+</style>
